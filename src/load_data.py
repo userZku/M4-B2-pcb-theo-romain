@@ -76,20 +76,27 @@ def get_dataloaders(
     `torch.manual_seed(seed)` avant l'entraînement pour que la comparaison
     entre binômes soit reproductible.
     """
+    # 1) Construit le dataset complet (images + labels) avec les transforms par défaut.
     dataset = PCBDefectDataset(root, transform=get_default_transforms())
 
+    # 2) Calcule les tailles des sous-ensembles train/val/test.
     n_total = len(dataset)
     n_val = int(n_total * val_split)
     n_test = int(n_total * test_split)
     n_train = n_total - n_val - n_test
 
+    # 3) Split reproductible grâce à un générateur pseudo-aléatoire seedé.
     generator = torch.Generator().manual_seed(seed)
     train_ds, val_ds, test_ds = torch.utils.data.random_split(
         dataset, [n_train, n_val, n_test], generator=generator
     )
 
+    # 4) Crée les DataLoaders :
+    # - train avec shuffle=True pour mélanger les batches à chaque epoch,
+    # - val/test en ordre fixe pour des métriques stables.
     train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_ds, batch_size=batch_size, shuffle=False)
     test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False)
 
+    # 5) Retourne les trois flux de données prêts pour entraînement/évaluation.
     return train_loader, val_loader, test_loader
