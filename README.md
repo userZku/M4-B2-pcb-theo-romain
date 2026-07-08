@@ -1,15 +1,15 @@
 # M4-B2 — Squelette repo (vision PCB Defect — binôme async)
 
 > **Repo template GitHub.** Le membre désigné du binôme clique sur
-> **« Use this template »** → nomme `M4-B2-pcb-<binome>` → invite l'autre.
+> **« Use this template »** → nomme `M4-B2-pcb-theo-romain` → invite l'autre.
 
 ---
 
 ## 🚀 Démarrage (5 commandes)
 
 ```bash
-git clone git@github.com:<owner>/M4-B2-pcb-<binome>.git
-cd M4-B2-pcb-<binome>
+git clone git@github.com:<owner>/M4-B2-pcb-theo-romain.git
+cd M4-B2-pcb-theo-romain
 
 python -m venv .venv && source .venv/bin/activate
 # (variante uv : uv venv .venv && source .venv/bin/activate)
