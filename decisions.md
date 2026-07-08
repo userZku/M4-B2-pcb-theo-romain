@@ -8,21 +8,21 @@
 > Une seule option implémentée jusqu'à l'inférence. Les 2 autres sont
 > estimées (mini-prototypes + sources publiques).
 
-**Choix** : ☐ Option A (CNN scratch) ☐ Option B (Transfer learning) ☐ Option C (Zero-shot CLIP)
+**Choix** : ☐ Option A (CNN scratch) ☑ Option B (Transfer learning) ☐ Option C (Zero-shot CLIP)
 
 **Argument** :
-- ...
-- ...
-- ...
+- D'après la grille de décision, étant donné qu'on a de la donnée labélisé en pas très grande quantité on élimine l'option C, que l'on peut garder en BaseLine car rapide à mettre en place.
+- On n'a pas énormément de donnée donc la meilleur option dans les options qui reste est l'option B
+- L'option A reste aussi un baseline intéressante mais moins adaptée que l'option B
 
 ## 2. Répartition des tâches binôme
 
-| Tâche | Membre 1 (`<prénom1>`) | Membre 2 (`<prénom2>`) | Modalité |
+| Tâche | Membre 1 (`Théo`) | Membre 2 (`Romain`) | Modalité |
 |---|---|---|---|
-| Setup repo + EDA | ... | ... | pair-coding MP ? |
-| Implémentation option | ... | ... | ... |
-| Comparatif économique | ... | ... | ... |
-| README + restitution | ... | ... | ... |
+| Setup repo + EDA | ☑ | ☑ | pair-coding |
+| Implémentation option | Option  | Option  | MP |
+| Comparatif économique | ☑ | ... | MP |
+| README + restitution | ... | ☑ | MP |
 
 ## 3. Coordination Discord
 
@@ -50,4 +50,4 @@
 
 ---
 
-*Décisions tracées par le binôme `<prénom1>` × `<prénom2>` — `<date>`.*
+*Décisions tracées par le binôme `Théo` × `Romain` — `08/07/2026`.*
