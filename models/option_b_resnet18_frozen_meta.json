@@ -1,0 +1,41 @@
+{
+  "format": "torch_state_dict",
+  "saved_model_path": "..\\models\\option_b_resnet18_frozen.pth",
+  "model_name": "resnet18_transfer_frozen",
+  "n_classes": 7,
+  "classes": [
+    "ok",
+    "open",
+    "short",
+    "mousebite",
+    "spur",
+    "copper",
+    "pin_hole"
+  ],
+  "timestamp_utc": "2026-07-09T14:37:14.371220+00:00",
+  "dataset_fingerprint_sha256": "0049bb5535906192430fc4d08ccad34b4b8e4955da89b216c97a9fb1f3f36692",
+  "versions": {
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "torch": "2.5.0+cpu"
+  },
+  "training_config": {
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epochs": 5,
+    "optimizer": "Adam",
+    "loss_function": "CrossEntropyLoss",
+    "freeze_backbone": true,
+    "unfrozen_parts": [
+      "fc"
+    ]
+  },
+  "metrics": {
+    "train_time_s": 303.7595522000047,
+    "test_loss": 1.402350466213529,
+    "test_acc": 0.5079365079365079,
+    "latency_ms_batch1_cpu_or_device": 77.7808710001409,
+    "best_val_epoch": 5,
+    "best_val_acc": 0.5047619047619047,
+    "best_val_loss": 1.362692849976676
+  }
+}
