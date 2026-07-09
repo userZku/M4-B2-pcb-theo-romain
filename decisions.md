@@ -20,7 +20,7 @@
 | Tâche | Membre 1 (`Théo`) | Membre 2 (`Romain`) | Modalité |
 |---|---|---|---|
 | Setup repo + EDA | ☑ | ☑ | pair-coding |
-| Implémentation option | Option  | Option  | MP |
+| Implémentation option | Option B | Option A | MP |
 | Comparatif économique | ☑ | ... | MP |
 | README + restitution | ... | ☑ | MP |
 
@@ -33,11 +33,12 @@
 
 ## 4. Branches Git
 
-- Convention : `<prénom>/<feature>` (ex. `alice/option-b`, `bob/comparatif`)
-- Merge sur `main` après revue MP
+- `main` seulement avec commit avec des prénoms
+- `merge` quand ça sera prêt
 
 ## 5. Restitution duo mardi 1ᵉʳ sept (rentrée M5)
 
+⚠️⚠️⚠️TODO à définir!⚠️⚠️⚠️
 - **Membre 1** présente : (démo technique 3 min)
 - **Membre 2** présente : (argumentation économique 2 min)
 - 5 min total + 5 min discussion
