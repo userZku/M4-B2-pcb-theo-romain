@@ -45,9 +45,19 @@ def build_resnet18_classifier(n_classes: int = len(CLASSES), freeze_backbone: bo
     Returns:
         nn.Module prêt à l'entraînement.
     """
-    # TODO — implémenter le transfer learning
-    #        (cf. ressources/02_Transfer_learning_essentiel.md)
-    raise NotImplementedError("TODO — construire le ResNet-18 + nouvelle tête")
+
+    # Charger le ResNet-18 pré-entraîné
+    model = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
+
+    # Geler le backbone si demandé
+    if freeze_backbone:
+        for param in model.parameters():
+            param.requires_grad = False
+
+    # Remplacer la dernière couche fully connected
+    model.fc = nn.Linear(model.fc.in_features, n_classes)
+
+    return model
 
 
 # Pour l'entraînement / l'évaluation, réutilise les boucles `train_one_epoch`
