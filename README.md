@@ -45,17 +45,29 @@ jupyter notebook notebooks/M4-B2_template.ipynb
 M4-B2-pcb-<binome>/
 ├── scripts/
 │   └── generate_dataset.py              # génère les images PCB (seed 42)
-├── data/                                # gitignored
-│   └── pcb_defect_sample/               # produit par le script
-│       ├── ok/ open/ short/ ...         # 7 classes
+├── data/
+│   ├── .gitkeep
+│   ├── pcb_defect_sample/               # dataset généré (gitignored)
+│   │   ├── ok/ open/ short/ ...         # 7 classes
+│   └── test_model/                      # images de test individuelles
 ├── notebooks/
-│   └── M4-B2_template.ipynb
+│   ├── M4-B2_template.ipynb
+│   ├── M4-B2_romain.ipynb
+│   ├── M4-B2_theo.ipynb
+│   └── M4-B2_theo-romain.ipynb
 ├── src/
+│   ├── __init__.py
 │   ├── load_data.py                     # Dataset PyTorch + dataloaders
-│   ├── option_a_cnn.py                  # CNN from scratch (TODO si choisi)
-│   ├── option_b_transfer.py             # ResNet-18 transfer (TODO si choisi)
-│   └── option_c_clip.py                 # CLIP zero-shot (TODO si choisi)
-├── models/                              # gitignored
+│   ├── option_a_cnn.py                  # CNN from scratch
+│   ├── option_b_transfer.py             # Transfer learning ResNet-18
+│   └── option_c_clip.py                 # CLIP zero-shot
+├── models/
+│   ├── .gitkeep
+│   ├── simple_cnn.pth                   # artefact local (gitignored)
+│   ├── cnn_romain.joblib                # artefact local (gitignored)
+│   ├── option_b_resnet18_frozen.pth     # artefact local (gitignored)
+│   ├── option_b_resnet18_v2_layer4_fc.pth # artefact local (gitignored)
+│   └── *_meta.json                      # métadonnées (versions/métriques)
 ├── ressources/                          # 📚 6 mini-cours
 │   ├── README.md
 │   ├── 01_CNN_from_scratch_essentiel.md
