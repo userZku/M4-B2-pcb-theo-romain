@@ -31,10 +31,10 @@
 - **Soir** : ce qui reste pour demain
 - **Vendredi 11h** : test croisé du repo (chacun clone et teste le code de l'autre)
 
-## 4. Branches Git
+## 4. Git
 
-- `main` seulement avec commit avec des prénoms
-- `merge` quand ça sera prêt
+- `main` seulement avec des prénoms
+- `merge` quand au fur et à mesure
 
 ## 5. Restitution duo mardi 1ᵉʳ sept (rentrée M5)
 
