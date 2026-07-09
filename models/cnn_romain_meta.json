@@ -1,0 +1,33 @@
+{
+    "versions": {
+        "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+        "torch": "2.5.0+cpu",
+        "joblib": "1.5.3"
+    },
+    "timestamp": "2026-07-09T10:22:33.501907+00:00",
+    "dataset_sha256": "0049bb5535906192430fc4d08ccad34b4b8e4955da89b216c97a9fb1f3f36692",
+    "hyperparameters": {
+        "batch_size": 64,
+        "learning_rate": 0.001,
+        "n_epochs": 10,
+        "optimizer": "Adam",
+        "loss_function": "CrossEntropyLoss"
+    },
+    "internal_metrics": {
+        "train_time_s": 39.09111040001153,
+        "train_loss": 0.3746862728174041,
+        "train_accuracy": 0.8591836734693877
+    },
+    "feature_columns": [
+        "image"
+    ],
+    "target_mapping": {
+        "0": "ok",
+        "1": "open",
+        "2": "short",
+        "3": "mousebite",
+        "4": "spur",
+        "5": "copper",
+        "6": "pin_hole"
+    }
+}
