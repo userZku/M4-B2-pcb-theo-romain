@@ -21,8 +21,8 @@
 |---|---|---|---|
 | Setup repo + EDA | ☑ | ☑ | pair-coding |
 | Implémentation option | Option B | Option A | MP |
-| Comparatif économique | ☑ | ... | MP |
-| README + restitution | ... | ☑ | MP |
+| Comparatif économique | ☑ | ☑ | MP |
+| README + restitution | ☑ | ☑ | MP |
 
 ## 3. Coordination Discord
 
@@ -38,16 +38,17 @@
 
 ## 5. Restitution duo mardi 1ᵉʳ sept (rentrée M5)
 
-⚠️⚠️⚠️TODO à définir!⚠️⚠️⚠️
-- **Membre 1** présente : (démo technique 3 min)
-- **Membre 2** présente : (argumentation économique 2 min)
+- **Membre 1 (`Théo`)** présente : l'EDA, l'option B (transfer learning), les résultats V1/V2 et la démonstration technique.
+- **Membre 2 (`Romain`)** présente : l'option A (CNN), la comparaison économique et l'argumentation finale.
 - 5 min total + 5 min discussion
 
 ## 6. Points négociés (à expliciter en cas de désaccord)
 
 > Si vous n'êtes pas d'accord sur un choix, tracez-le honnêtement ici.
 
-- ...
+- Option B retenue comme recommandation finale car meilleure précision mesurée sur le test standard.
+- Option A conservée comme baseline solide car plus légère et plus rapide en entraînement et en inférence.
+- Le notebook commun est limité à l'EDA et à la comparaison, les implémentations détaillées restent séparées dans les notebooks individuels.
 
 ---
 

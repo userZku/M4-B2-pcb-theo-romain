@@ -86,6 +86,55 @@ M4-B2-pcb-<binome>/
 
 ---
 
+## 📦 Livrables
+
+- `Repo GitHub binôme` : racine du projet `M4-B2-pcb-theo-romain`
+- `Notebook commun` : `notebooks/M4-B2_theo-romain.ipynb` (EDA + comparaison)
+- `Notebook option A` : `notebooks/M4-B2_romain.ipynb`
+- `Notebook option B` : `notebooks/M4-B2_theo.ipynb`
+- `Comparatif 3 approches` : `economic_comparison.md`
+- `Verdict` : `verdict.md`
+- `Décisions binôme` : `decisions.md`
+- `Code reproductible` : `src/`
+- `README` : `README.md`
+
+---
+
+## ▶️ 3 commandes pour reproduire
+
+```bash
+pip install -r requirements.txt
+python scripts/generate_dataset.py
+
+# Générer les modèles
+jupyter notebook notebooks/M4-B2_romain.ipynb
+jupyter notebook notebooks/M4-B2_theo.ipynb
+
+jupyter notebook notebooks/M4-B2_theo-romain.ipynb
+```
+
+---
+
+## 🗺️ Flux options A et B
+
+```mermaid
+flowchart TD
+   A[data/pcb_defect_sample] --> B[src/load_data.py]
+   B --> C[Notebook commun<br/>EDA + comparaison]
+   B --> D[Notebook Romain<br/>Option A]
+   B --> E[Notebook Théo<br/>Option B]
+   D --> F[Option A - src/option_a_cnn.py]
+   E --> G[Option B - src/option_b_transfer.py]
+   F --> H[Modèle CNN]
+   G --> I[Modèle ResNet18]
+   H --> J[economic_comparison.md]
+   I --> J
+   C --> J
+   J --> K[verdict.md]
+```
+
+---
+
 ## 📚 Mini-cours d'appui
 
 6 mini-cours dans [`./ressources/`](./ressources/) — lecture juste-à-temps.
@@ -119,6 +168,12 @@ d'approche que vous devez justifier.**
 7. **Finition + test croisé du repo** (~30 min)
 
 → Compétences visées : **C1 — adapter** renforcé + **C4 — adapter** renforcé.
+
+### Restitution duo
+
+- `Théo` : EDA, option B, résultats techniques
+- `Romain` : option A, comparaison économique, recommandation finale
+- Support commun : `notebooks/M4-B2_theo-romain.ipynb`, `economic_comparison.md`, `verdict.md`
 
 ### ⭐ Extensions optionnelles (« cas client avancé »)
 
